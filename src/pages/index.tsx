@@ -32,6 +32,7 @@ const Home = () => {
     const { email: subscribedEmail } = response.data;
 
     alert(`${subscribedEmail} was added successfully`);
+
     setIsLoading(false);
   }
 
