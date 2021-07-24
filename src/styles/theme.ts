@@ -20,6 +20,7 @@ const theme = {
     'gray-80': '#646464',
     'gray-90': '#4f4f4f',
     'gray-100': '#333333',
+    'purple-rocketseat': '#8257e5',
     primary: '#0675ce',
     'primary-light': '#2c9bf5',
     'primary-dark': '#00569c',
