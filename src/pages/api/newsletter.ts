@@ -12,7 +12,7 @@ async function connectToDatabase(uri: string) {
   return database;
 }
 
-export default async function subscribe(request: VercelRequest, response: VercelResponse) {
+async function subscribe(request: VercelRequest, response: VercelResponse) {
   const { email } = request.body;
 
   const database = await connectToDatabase(process.env.MONGODB_URI as string);
@@ -23,3 +23,5 @@ export default async function subscribe(request: VercelRequest, response: Vercel
 
   return response.status(201).json({ email });
 }
+
+export default subscribe;
