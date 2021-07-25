@@ -48,7 +48,11 @@ export const CompanyName = styled.span`
   padding-left: 1rem;
 `;
 
-export const Input = styled.input`
+interface InputProps {
+  bordered: boolean;
+}
+
+export const Input = styled.input<InputProps>`
   width: 80%;
   height: 60px;
   border-radius: 3px;
@@ -58,6 +62,30 @@ export const Input = styled.input`
   background-color: #121214;
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.body.lg};
+  ${({ theme, bordered }) => bordered && `border: 1px solid ${theme.colors.red}`}
+`;
+
+export const TermsOfService = styled.div`
+  align-self: center;
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Checkbox = styled.input``;
+
+interface LabelProps {
+  error: boolean;
+}
+
+export const Label = styled.span<LabelProps>`
+  font-family: ${({ theme }) => theme.fonts.primary};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.body.sm};
+  padding-left: 1rem;
+  ${({ theme, error }) => error && `color: ${theme.colors.red}`}
 `;
 
 export const SubmitButton = styled.button`
