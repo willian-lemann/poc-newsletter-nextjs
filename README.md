@@ -10,7 +10,7 @@ An nextjs application using vercel serverless to save a email to a mongodb datab
 - vercel serverless
 - convert kit api integration
 
-### Techs
+### Techs used
 
 <hr style="height: 1px"/>
 
